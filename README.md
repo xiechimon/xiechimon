@@ -6,13 +6,13 @@
 
 ---
 
-### 👨‍💻 关于我 (About Me)
+### 👨‍💻 About Me
 
 A Spider-Man
 
 ---
 
-### 🛠️ 技术栈 (Tech Stack)
+### 🛠️ Tech Stack
 
 <div align="center">
   <a href="https://skillicons.dev">
