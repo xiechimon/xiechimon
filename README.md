@@ -4,19 +4,4 @@
   </a>
 </div>
 
----
-
-### 👨‍💻 About Me
-
-A Spider-Man
-
----
-
-### 🛠️ Tech Stack
-
-<div align="center">
-  <a href="https://skillicons.dev">
-    <img src="https://skillicons.dev/icons?i=java,js,react,nodejs,spring,mysql,docker,git,linux" alt="My Skills" />
-  </a>
-</div>
 
