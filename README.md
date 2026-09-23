@@ -32,7 +32,7 @@ I fix AI coding agents at the infrastructure level.
 | [OpenBitFun](https://github.com/GCWing/OpenBitFun) — agent runtime in Rust | ⭐ 2.3k | [1 merged](https://github.com/GCWing/OpenBitFun/pulls?q=is%3Apr+author%3Axiechimon+is%3Amerged) |
 | [rocketmq-rust](https://github.com/mxsm/rocketmq-rust) — RocketMQ in Rust | ⭐ 1.5k | [1 merged](https://github.com/mxsm/rocketmq-rust/pulls?q=is%3Apr+author%3Axiechimon+is%3Amerged) |
 | [libredb-studio](https://github.com/libredb/libredb-studio) — multi-database SQL IDE | ⭐ 0.9k | [1 merged](https://github.com/libredb/libredb-studio/pulls?q=is%3Apr+author%3Axiechimon+is%3Amerged) |
-| [forceinjection.github.io](https://github.com/ForceInjection/forceinjection.github.io) — AI fundamentals knowledge base | — | [1 merged](https://github.com/ForceInjection/forceinjection.github.io/pulls?q=is%3Apr+author%3Axiechimon+is%3Amerged) · feat: 全站亮暗主题切换 |
+| [AI-fundamentals](https://github.com/ForceInjection/AI-fundamentals) — AI infrastructure knowledge base (GPU/CUDA, training, inference, RAG, agents) | ⭐ 2.8k | [1 merged](https://github.com/ForceInjection/forceinjection.github.io/pulls?q=is%3Apr+author%3Axiechimon+is%3Amerged) · feat: 全站亮暗主题切换 |
 
 PRs focus on AI coding agent / gateway internals: CLI device flow, SSE response handling, provider model-routing, governance config key associations, API error-body sanitization, terminal detection & image-path forwarding, Ctrl+C lifecycle — all real bugs found and patched in live infrastructure.
 
