@@ -1,7 +1,5 @@
 <div align="center">
 
-<h1>Xmon Dai</h1>
-
 <h3>AI Native 全栈工程师</h3>
 
 I fix AI coding agents at the infrastructure level.
@@ -43,11 +41,3 @@ PRs focus on AI coding agent / gateway internals: CLI device flow, SSE response 
 - [pacman](https://github.com/xiechimon/pacman) — MVP-by-MVP Java reimplementation of Claude Code / Pi, studying daemon contracts & agent orchestration
 - [pullcat](https://github.com/xiechimon/pullcat) — code review tool with OAuth2, AI review rules & GitHub webhook integration
 - [QuizBank](https://github.com/xiechimon/QuizBank) — Flutter audit exam app, 1,170 questions with AI streaming analysis
-
-<div align="center">
-
-![GitHub Stats](https://github-readme-stats.vercel.app/api?username=xiechimon&show_icons=true&count_private=true&hide_title=true&hide_border=true&hide=issues)
-
-[xiechimon.github.io/blog](https://xiechimon.github.io/blog/)
-
-</div>
