@@ -113,7 +113,7 @@ function renderLedger(rows) {
 		const name = r.repo.split('/')[1]
 		const blurb = shorten(NOTES[r.repo] ?? r.blurb, 58)
 		const label = `[${name}](https://github.com/${r.repo})${blurb ? ` — ${blurb}` : ''}`
-		const stars = `[![stars](https://img.shields.io/github/stars/${r.repo}?style=flat-square&label=%E2%98%85&color=555)](${pullUrl(r.repo)})`
+		const stars = `[![${name}: ${r.stars} stars](https://img.shields.io/github/stars/${r.repo}?style=flat-square&label=%E2%98%85&color=555)](${pullUrl(r.repo)})`
 		return `| ${label} | ${stars} | [${r.prs}](${pullUrl(r.repo)}) | +${r.added} / −${r.removed} |`
 	})
 	return [...head, ...body].join('\n')
