@@ -24,8 +24,6 @@ const QUERY = `query($q: String!, $cursor: String) {
 			... on PullRequest {
 				number
 				url
-				additions
-				deletions
 				closedAt
 				repository { nameWithOwner stargazerCount description }
 			}
@@ -76,13 +74,9 @@ function group(prs) {
 			stars: pr.repository.stargazerCount,
 			blurb: (pr.repository.description ?? '').replace(/\s+/g, ' ').trim(),
 			prs: 0,
-			added: 0,
-			removed: 0,
 			latest: pr.closedAt,
 		}
 		row.prs += 1
-		row.added += pr.additions
-		row.removed += pr.deletions
 		if (pr.closedAt > row.latest) row.latest = pr.closedAt
 		byRepo.set(key, row)
 	}
@@ -93,29 +87,18 @@ const pullUrl = (repo) =>
 	`https://github.com/${repo}/pulls?q=${encodeURIComponent(`is:pr is:merged author:${LOGIN}`)}`
 
 function renderStats(rows, prs) {
-	const added = rows.reduce((s, r) => s + r.added, 0)
-	const removed = rows.reduce((s, r) => s + r.removed, 0)
 	const big = rows.filter((r) => r.stars >= 30000).length
-	const contributors = rows
-		.filter((r) => r.stars >= 30000)
-		.map((r) => `[${r.repo.split('/')[1]}](https://github.com/${r.repo}/graphs/contributors)`)
-		.join(', ')
-	return [
-		`**${prs.length} pull requests merged into ${rows.length} upstream projects (+${added.toLocaleString('en-US')} / −${removed.toLocaleString('en-US')} lines), ${big} of them 30k+ star repos.**`,
-		``,
-		`Listed in the contributor graph of ${contributors}.`,
-	].join('\n')
+	return `**${prs.length} pull requests merged into ${rows.length} upstream projects, ${big} of them 30k+ star repos.**`
 }
 
 function renderLedger(rows) {
-	const head = ['| Project | Stars | Merged PRs | Lines |', '| :--- | ---: | ---: | ---: |']
+	const head = ['| Project | Stars | Merged PRs |', '| :--- | ---: | ---: |']
 	const body = rows.map((r) => {
 		const name = r.repo.split('/')[1]
 		const blurb = shorten(NOTES[r.repo] ?? r.blurb, 58)
 		const label = `[${name}](https://github.com/${r.repo})${blurb ? ` — ${blurb}` : ''}`
 		const stars = `[![${name}: ${r.stars} stars](https://img.shields.io/github/stars/${r.repo}?style=flat-square&label=%E2%98%85&color=555)](${pullUrl(r.repo)})`
-		// Non-breaking spaces keep the line counts on one line; the description column absorbs the shrink.
-		return `| ${label} | ${stars} | [${r.prs}](${pullUrl(r.repo)}) | +${r.added}&nbsp;/&nbsp;−${r.removed} |`
+		return `| ${label} | ${stars} | [${r.prs}](${pullUrl(r.repo)}) |`
 	})
 	return [...head, ...body].join('\n')
 }
