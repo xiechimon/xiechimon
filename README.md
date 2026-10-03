@@ -55,10 +55,6 @@ Notable fixes: a CLI's Copilot device-flow routing, SSE responses that discarded
 npx @xiechimon/pacman
 ```
 
-**[pullcat](https://github.com/xiechimon/pullcat)** — an AI code-review service for GitHub: OAuth2, per-repo review rules, and webhook-driven review runs. Java 17, Spring Boot 3, React 19.
-
-**[QuizBank](https://github.com/xiechimon/QuizBank)** — an offline-first Flutter question bank for audit certification: 1,170 questions across 17 modules, spaced-repetition scheduling, and streaming AI explanations. Runs entirely on local SQLite.
-
 ## Contact
 
 [xiechimon@qq.com](mailto:xiechimon@qq.com)
