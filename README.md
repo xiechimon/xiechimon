@@ -8,11 +8,38 @@
 
 ---
 
+## What I build
+
+<a href="https://github.com/xiechimon/cairn"><img src="https://raw.githubusercontent.com/xiechimon/cairn/main/apps/web/public/logo.svg" alt="" width="40" align="left"></a>
+
+**[Cairn](https://github.com/xiechimon/cairn)** · [cairn.xmon.me](https://cairn.xmon.me) — a self-hosted multi-agent workspace that develops itself.
+
+<br clear="left">
+
+You file tickets on a kanban board; agents claim them, build in their own git worktree on your machines, review each other's work and open the PRs. Every run stops twice for a human, at the plan and at the diff, and the AI reviewer can block a merge.
+
+- **Multi-agent orchestration**: a chief agent only dispatches; coder and reviewer agents each carry their own model, skills, MCP servers and memory.
+- **Bootstrap loop**: Cairn claims, implements and reviews its own tickets and opens the PRs; a human still gates the merge.
+- **Eval and trajectory driven**: builds record base SHA and harness hash, rejections become structured records, and strong-vs-weak model A/B evals decide which prompt, skill and routing changes stay. No weight fine-tuning.
+- TypeScript monorepo: React 19 + Vite, Hono + SQLite server, a daemon on the Claude Agent SDK and pi.
+
+<a href="https://github.com/xiechimon/cairn">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/xiechimon/cairn/main/docs/assets/readme/board-dark.png">
+    <img alt="Cairn board" src="https://raw.githubusercontent.com/xiechimon/cairn/main/docs/assets/readme/board-light.png">
+  </picture>
+</a>
+
+### Also
+
+- **[QuizBank](https://github.com/xiechimon/QuizBank)** — Flutter (Material 3) quiz app with 1,170 questions, spaced-repetition scheduling, AI explanations streamed from DeepSeek / MiMo, and offline SQLite.
+- **[shanlink](https://github.com/xiechimon/shanlink)** — a high-performance short-link service built as Spring Boot 3 microservices.
+
+## Upstream contributions
+
 <!-- STATS:START -->
 **30 pull requests merged into 13 upstream projects, 4 of them 30k+ star repos.**
 <!-- STATS:END -->
-
-## Upstream contributions
 
 <!-- LEDGER:START -->
 | Project | Stars | Merged PRs |
@@ -33,14 +60,6 @@
 <!-- LEDGER:END -->
 
 Notable fixes: a CLI's Copilot device-flow routing, SSE responses that discarded valid empty completions, a provider router that rewrote a GA model id back to preview, governance config keys dropped on `PUT`, an API error body that leaked upstream detail, pasted-image paths lost between the terminal and the agent, and a second <kbd>Ctrl</kbd>+<kbd>C</kbd> that could not exit a stuck session.
-
-## What I build
-
-**[pacman](https://github.com/xiechimon/pacman)** — a self-hosted agent workspace. You file a task on a kanban board; an agent checks out a worktree and builds it on your own machines, streaming its work back as a conversation. Every run stops twice for a human — at the plan and at the diff — and the AI reviewer can block a merge, not just comment on it.
-
-```sh
-npx @xiechimon/pacman
-```
 
 ## Contact
 
